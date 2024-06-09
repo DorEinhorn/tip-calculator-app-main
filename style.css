@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+  }
+
+
+  img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+body{
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    margin-top: 1rem;
+    margin-bottom: 2.3rem;
+}
+
+.container{
+    background-color: var(--White);
+    border-radius: 10px;
+    display: flex;
+    padding: 40px 24px;
+    flex-direction: column;
+}
+
+.partOne{
+    padding: 0 30px;
+    /* width: 60%; */
+}
+.bill-input-label{
+    display: block;
+    margin-bottom: 12px;
+}
+
+.input-with-image {
+    position: relative;
+  }
+  
+  .input-with-image input {
+    width: 100%;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    height: 46px;
+    line-height: 46px;
+    font-size: 24px;
+    padding: 0 20px;
+    text-align: right;
+    margin-bottom: 38px;
+    border-radius: 5px;
+  }
+  
+  .input-with-image img {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+
+.bill-input-label,
+.select-tip-title,
+.number-of-people-wrapper .title {
+  color: var(--Dark-grayish-cyan);
+}
+
+.select-tip-title {
+    margin-bottom: 20px;
+  }
+
+.select-tip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  .tips {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--white);
+    padding: 6px 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .tips.active {
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+  }
+
+  #tip-custom{
+    padding: 0;
+  }
+
+  .tip-custom {
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    border: none;
+    line-height: 48px;
+    font-size: 24px;
+    text-align: center;
+    background-color: var(--Very-light-grayish-cyan);
+  }
+  
+.number-of-people-wrapper{
+    margin-top: 40px;
+}
+
+.number-of-people-wrapper .title {
+    margin-bottom: 12px;
+    display: block;
+  }
+
+.partTwo{
+    position: relative;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 10px;
+    padding: 40px;
+    /* width: 40%; */
+}
+
+.section {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+
+.section .title{
+    color: var(--White);
+    text-align: left;
+}
+
+.section .sub-title{
+    text-align: left;
+    color: var(--Dark-grayish-cyan);
+}
+
+.amount{
+    color: var(--Strong-cyan);
+    font-size: 24px;
+}
+
+.btn-reset{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-transform: uppercase;
+    background-color: var(--Strong-cyan);
+    width: 90%;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 5px;
+    border: none;
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 921px) {
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      gap: 50px;
+      margin-bottom: 238px;
+      flex-direction: row;
+    }
+  
+    body {
+      padding: 0;
+    }
+  
+    .partOne,
+    .partTwo {
+      width: 50%;
+    }
+  
+    .select-tip {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .btn-reset {
+      margin-top: 154px;
+    }
+  
+    .logo {
+      margin-top: 160px;
+      margin-bottom: 90px;
+    }
+  
+    .section .amount {
+      font-size: 38px;
+    }
+  }

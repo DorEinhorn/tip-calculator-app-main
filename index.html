@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Tip calculator app</title>
+
+</head>
+<body>
+  <img src="./images/logo.svg" alt="" class="logo">
+  <div class="container">
+    <div class="partOne">  
+    <label for="bill-input" class="bill-input-label">Bill</label>
+    <div class="input-with-image">
+    <input type="number" class="input bill-input" id="bill-input" />
+    <img src="./images/icon-dollar.svg" alt="">
+  </div>
+
+  <p class="select-tip-title">Select Tip %</p>
+  <div class="select-tip">
+  <div class="tips tip-5" data-percentage="5">5%</div>
+  <div class="tips tip-10" data-percentage="10">10%</div>
+  <div class="tips tip-15" data-percentage="15">15%</div>
+  <div class="tips tip-25" data-percentage="25">25%</div>
+  <div class="tips tip-50" data-percentage="50">50%</div>
+  <div id="tip-custom" class="tips select-tip-custom">
+    <input type="number" class="tip-custom" placeholder="Custom">
+  </div>
+  </div>
+
+  <div class="number-of-people-wrapper">
+    <label for="number-of-people-input" class="title">Number of People</label
+    >
+    <div class="input-with-image">
+      <input id="number-of-people-input" type="text" value="5" />
+      <img src="./images/icon-person.svg" alt="" />
+    </div>
+  </div>
+</div>
+
+  <div class="partTwo">
+    <div class="section">
+      <div class="tip-amount-inner text">
+       <p class="title">Tip Amount</p>
+       <p class="sub-title"> / person</p></div>
+  <div class="amount" id="tip-amount">$0</div>
+</div>
+ 
+<div class="section"> 
+  <div class="total-amount-inner text">
+    <p class="title">Total</p>
+    <p class="sub-title"> / person</p></div>
+
+  <div class="amount" id="total-amount">$0</div></div>
+
+
+  <button class="btn-reset">Reset</button></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
